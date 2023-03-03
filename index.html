@@ -16,7 +16,20 @@
     <input type="submit" value="Today Start" />
   </form>
   <h2 id="greeting" class="hidden"></h2>
-  <script src="app.js"></script>
+  <!-- date form -->
+  <h4 id="date">0000년 00월 00일 요일 오전 00:00:00</h4>
+  <!-- todo list form -->
+  <form id="todo-form">
+    <input required type="text" placeholder="To Do List" />
+    <input type="submit" value="➕" />
+  </form>
+  <ul id="show-todo" class="hidden">
+  </ul>
+  <h2 id="greeting" class="hidden"></h2>
+  <script src="login.js"></script>
+  <script src="date.js"></script>
+  <script src="background.js"></script>
+  <script src="todolist.js"></script>
 </body>
 
 </html>
