@@ -7,6 +7,8 @@ let todos = [];
 function deleteTodoList(event) {
   const li = event.target.parentNode;
   li.remove();
+  todos = todos.filter(todo => todo.id !== parseInt(li.id));
+  saveTodos();
 }
 
 function paintTodo(todo) {
@@ -18,7 +20,6 @@ function paintTodo(todo) {
   const button = document.createElement("button");
   button.innerText = "X";
   button.addEventListener("click", deleteTodoList)
-  span.innerText = todo;
   showTodo.appendChild(li);
   li.appendChild(span);
   li.appendChild(button);
@@ -44,4 +45,9 @@ function handleTodoList(event) {
 todolist.addEventListener("submit", handleTodoList);
 
 const savedTodo = localStorage.getItem("todo");
+if (savedTodo !== null) {
+  const parseTodos = JSON.parse(savedTodo);
+  todos = parseTodos;
+  parseTodos.forEach(paintTodo);
+}
 
