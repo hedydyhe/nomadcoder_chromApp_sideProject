@@ -15,21 +15,33 @@
     <input required maxlength="10" type="text" placeholder="name" />
     <input type="submit" value="Today Start" />
   </form>
-  <h2 id="greeting" class="hidden"></h2>
+  <h1 id="greeting" class="hidden"></h1>
   <!-- date form -->
-  <h4 id="date">0000년 00월 00일 요일 오전 00:00:00</h4>
+  <h3 id="date">0000년 00월 00일 요일 오전 00:00:00</h3>
+  <!-- weather-form -->
+  <div id="weather">
+    <span></span>
+    <span></span>
+  </div>
   <!-- todo list form -->
+  <div id="todos">
   <form id="todo-form">
     <input required type="text" placeholder="To Do List" />
     <input type="submit" value="➕" />
   </form>
   <ul id="show-todo" class="hidden">
   </ul>
-  <h2 id="greeting" class="hidden"></h2>
+  </div>
+  <div id="quote">
+    <span></span>
+    <span></span>
+  </div>
   <script src="login.js"></script>
   <script src="date.js"></script>
   <script src="background.js"></script>
   <script src="todolist.js"></script>
+  <script src="weather.js"></script>
+  <script src="quotes.js"></script>
 </body>
 
 </html>
